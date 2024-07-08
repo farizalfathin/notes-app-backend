@@ -11,6 +11,7 @@
     "rules": {
         "no-console": "off",
         "eol-last": "off",
-        "no-underscore-dangle": "error"
+        "no-underscore-dangle": "off",
+        "camelcase": "off"
     }
 }
