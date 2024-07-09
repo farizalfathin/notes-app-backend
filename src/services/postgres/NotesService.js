@@ -16,10 +16,11 @@ class NotesService {
 
     const query = {
       text: 'INSERT INTO notes VALUES($1, $2, $3, $4, $5, $6) RETURNING id',
-      values: [id, title, tags, body, createdAt, updatedAt],
+      values: [id, title, body, tags, createdAt, updatedAt],
     };
 
     const result = await this._pool.query(query);
+    console.log(result);
 
     if (!result.rows[0].id) throw new InvariantError('Catatan Gagal ditambahkan');
 
