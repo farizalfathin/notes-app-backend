@@ -13,6 +13,7 @@
         "eol-last": "off",
         "no-underscore-dangle": "off",
         "camelcase": "off",
-        "import/no-extraneous-dependencies": "off"
+        "import/no-extraneous-dependencies": "off",
+        "function-paren-newline": "off"
     }
 }
