@@ -42,7 +42,7 @@ class NotesHandler {
     };
   }
 
-  async getNoteByIdHandler(request) {
+  async getNoteByIdHandler(request, h) {
     const { id } = request.params;
     const { id: credentialId } = request.auth.credentials;
 
@@ -56,7 +56,7 @@ class NotesHandler {
     };
   }
 
-  async putNoteByIdHandler(request) {
+  async putNoteByIdHandler(request, h) {
     this._validator.validateNotePayload(request.payload);
     const { id } = request.params; const { id: credentialId } = request.auth.credentials;
 
@@ -69,7 +69,7 @@ class NotesHandler {
     };
   }
 
-  async deleteNoteByIdHandler(request) {
+  async deleteNoteByIdHandler(request, h) {
     const { id } = request.params;
     const { id: credentialId } = request.auth.credentials;
 
@@ -82,7 +82,7 @@ class NotesHandler {
     };
   }
 
-  async getUsersByUsernameHandler(request) {
+  async getUsersByUsernameHandler(request, h) {
     const { username = '' } = request.query;
     const users = await this._service.getUsersByUsername(username);
     return {

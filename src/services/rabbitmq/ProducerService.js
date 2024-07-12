@@ -1,4 +1,4 @@
-import amqp from 'amqplib';
+const amqp = require('amqplib');
 
 const ProducerService = {
   sendMessage: async (queue, message) => {
@@ -16,4 +16,4 @@ const ProducerService = {
   },
 };
 
-export default ProducerService;
+module.exports = ProducerService;
