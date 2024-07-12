@@ -4,7 +4,7 @@ const routes = (handler) => [
   {
     method: 'POST',
     path: '/upload/images',
-    handler: handler.postUploadImageHandler,
+    handler: (request, h) => handler.postUploadImageHandler(request, h),
     options: {
       payload: {
         allow: 'multipart/form-data',
